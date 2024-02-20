@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="w-[100%] h-screen bg-[whitesmoke]">
+    <!-- header -->
+    <header class="mx-[100px]">
+        <!-- banner -->
+        <section class="w-full h-[85px] flex justify-between items-center bg-transparent" >
+            <div>
+                <a href="">
+                    <img class="w-[85px]" src="../images/logo.png" alt="">
+                </a>
+            </div>
+            <!-- component -->
+            <div class="flex items-center w-[500px] h-[45px] mx-auto bg-white rounded-lg border-[1px] border-[#596DAA]" x-data="{ search: '' }">
+                <div class="w-full">
+                    <input type="search" class="ml-5 w-full text-gray-800 rounded-full focus:outline-none"
+                        placeholder="Search books..." x-model="search">
+                </div>
+                <div>
+                    <button type="submit" class="flex items-center bg-[#596DAA] justify-center w-12 h-[45px] text-white rounded-r-lg"
+                        :class="(search.length > 0) ? 'bg-purple-500' : 'bg-gray-500 cursor-not-allowed'"
+                        :disabled="search.length == 0">
+                        <i class="text-[#F6F6F6] fa-solid fa-magnifying-glass"></i>                  
+                    </button>
+                </div>
+            </div>
+            <div class="w-[350px] flex justify-between items-center">
+                <span><a href=""><i class="text-[#596DAA] text-[24px] fa-solid fa-cart-shopping"></i></a></span>
+                <button class="w-[130px] h-[45px] text-lg rounded-xl bg-transparent text-[#596DAA] hover:border-[2px] hover:border-[#ED553B]">Sign up <span class="ml-[7px]"><i class="text-[34416A] fa-solid fa-user-plus"></i></span></button>
+                <button class="w-[130px] h-[45px] text-lg rounded-xl bg-[#596DAA] hover:bg-[#ED553B] text-[#F6F6F6]">Log in <span class="ml-[7px]"><i class="text-[#F6F6F6] fa-solid fa-user-lock"></i></span></button>
+            </div>
+        </section>
+    </header>
+    <!-- navbar -->
+    <nav class="w-full h-[60px] bg-[#34416A] flex justify-center items-center sticky top-0">
+        <ul class="flex justify-center items-center p-4 md:p-0 mt-4 font-normal md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+            <li>
+                <a href="./index.html" class=" block py-2 px-3 mx-[30px] text-[#FEFEFE] text-base bg-[#FEFEFE] rounded md:bg-transparent md:text-[#FEFEFE] md:p-0 md:dark:text-blue-500 hover:text-[#ED553B]" aria-current="page">Home</a>
+            </li>
+            <li>
+                <a href="./aboutus.html" class=" block py-2 px-3 mx-[30px] text-gray-100 text-base rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#ED553B] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About us</a>
+            </li>
+            <li>
+                <a href="#" class=" block py-2 px-3 mx-[30px] text-gray-100 rounded text-base hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#ED553B] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Books</a>
+            </li>
+            <li>
+                <a href="#" class=" block py-2 px-3 mx-[30px] text-gray-100 rounded text-base hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#ED553B] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">New release</a>
+            </li>
+            <li>
+                <a href="#" class=" block py-2 px-3 mx-[30px] text-gray-100 rounded text-base hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#ED553B] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+            </li>
+            <li>
+                <a href="#" class=" block py-2 px-3 mx-[30px] text-gray-100 rounded text-base hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#ED553B] md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- main -->
+    <main >
+        <section class="w-full h-[800px] flex justify-between my-auto items-center">
+            <div class="ml-[200px] w-[470px] h-[700px] shadow-md flex justify-center items-center">
+                <img class="w-[335px] h-[500px]" src="../images/thewomen.jpg" alt="">
+            </div>
+            <div class="mr-[400px]">
+                <h4 class="font-semibold text-[24px] text-[#34416A]">The Women</h4>
+                <p class="mt-[12px] text-[18px] text-[#596DAA] font-normal">Kristin Hannah</p>
+                <h4 class="mt-[15px] font-semibold text-[24px] text-[#ED553B]">$20.00</h4>
+                <p class="mt-[10px] text-[16px] font-normal text-[#596DAA]">Description</p>
+                <p class="mt-[10px] text-[16px] font-normal text-[#596DAA]">Book type</p>
+                <p class="mt-[10px] text-[16px] font-normal text-[#596DAA]">Publisher</p>
+                <p class="mt-[10px] text-[16px] font-normal text-[#596DAA]">Language</p>
+                <p class="mt-[10px] text-[16px] font-normal text-[#596DAA]">Papaerback</p>
+                <div class="mt-[30px]">
+                    <button class="w-[50px] h-[50px] rounded-[10px] border-[1px] border-[#ED553B]">1</button>
+                    <button class="ml-[30px] text-lg text-[#F6F6F6] w-[210px] h-[50px] rounded-[10px] bg-[#ED553B]">Add to cart <span class="ml-[15px]"><i class="text-[#F6F6F6] fa-solid fa-cart-plus"></i></span></button>
+                </div>
+                <div class="mt-[50px]">
+                    <button class="w-[170px] h-[45px] text-xl rounded-xl text-[#596DAA] border-[1px] border-[#596DAA] hover:border-2 hover:border-[#ED553B]">View more<span class="ml-[15px]"><i class="text-[20px] text-[#596DAA] fa-solid fa-arrow-right"></i></span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-[#34416A] w-full h-[450px] relative">
+        <section class="mx-[100px] mt-[50px] flex float-left">
+            <div class="w-[300px]">
+                <img class="w-[90px]" style="filter: brightness(100%) contrast(100%);" src="../images/footerlogo.png" alt="">
+                <p class="text-[16px] font-light text-[#F6F6F6] mt-[25px]">
+                    Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </p>
+                <div class="mt-[25px]">
+                    <span class="mr-[40px]"><a href=""><i class="text-[#F6F6F6] text-[30px] fa-brands fa-facebook"></i></a></span>
+                    <span class="mr-[40px]"><a href=""><i class="text-[#F6F6F6] text-[30px] fa-brands fa-linkedin-in"></i></a></span>
+                    <span class="mr-[40px]"><a href=""><i class="text-[#F6F6F6] text-[30px] fa-brands fa-x-twitter"></i></a></span>
+                    <span class="mr-[40px]"><a href=""><i class="text-[#F6F6F6] text-[30px] fa-brands fa-youtube"></i></a></span>
+                </div>
+            </div>
+            <div class="text-[#F6F6F6] w-[500px] flex justify-between ml-[300px]">
+                <div>
+                    <h4 class="text-[24px]">Company</h4>
+                    <ul class="mt-[30px]">
+                        <li class="font-light text-[16px]"><a href="">Home</a></li>
+                        <li class="mt-[5px] font-light text-[16px]"><a href="">About us</a></li>
+                        <li class="mt-[5px] font-light text-[16px]"><a href="">Books</a></li>
+                        <li class="mt-[5px] font-light text-[16px]"><a href="">New release</a></li>
+                        <li class="mt-[5px] font-light text-[16px]"><a href="">Contact</a></li>
+                        <li class="mt-[5px] font-light text-[16px]"><a href="">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-[24px]">Important links</h4>
+                    <ul class="mt-[30px]">
+                        <li class="font-light text-[16px]"><a href="">Privacy policy</a></li>
+                        <li class="mt-[5px] font-light text-[16px]"><a href="">FAQs</a></li>
+                        <li class="mt-[5px] font-light text-[16px]"><a href="">Terms of service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="absolute bottom-0 left-0 w-full text-center text-[#F6F6F6] mb-[30px]">
+            <div class="h-[2px] w-full my-[50px] bg-[#C9CAD9]"></div>
+            <div class="container mx-auto">
+                <div class="w-[1000px] mx-auto flex justify-between items-center">
+                    <div class="text-sm">© 2024 Chipor. All Rights Reserved.</div>
+                    <div class="text-sm">Privacy | Terms of Service</div>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
